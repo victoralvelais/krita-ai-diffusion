@@ -570,6 +570,16 @@ optional_models = [
         },
     ),
     ModelResource(
+        "ControlNet QR Code",
+        ResourceId(ResourceKind.controlnet, SDVersion.sdxl, ControlMode.qr_code),
+        {
+            Path(
+                "models/controlnet/control_sdxl__qrcode.safetensors"
+                
+            ): "https://huggingface.co/Nacholmo/controlnet-qr-pattern-sdxl/blob/main/diffusion_pytorch_model.safetensors",
+        },
+    ),
+    ModelResource(
         "ControlNet Canny Edge (XL)",
         ResourceId(ResourceKind.controlnet, SDVersion.sdxl, ControlMode.canny_edge),
         {
@@ -812,6 +822,7 @@ search_paths: dict[str, list[str]] = {
     resource_id(ResourceKind.controlnet, SDVersion.sd15, ControlMode.pose): ["control_v11p_sd15_openpose", "control_lora_rank128_v11p_sd15_openpose"],
     resource_id(ResourceKind.controlnet, SDVersion.sdxl, ControlMode.pose): ["xinsiropenpose", "control-lora-openposexl2-rank", "thibaud_xl_openpose"],
     resource_id(ResourceKind.controlnet, SDVersion.sd15, ControlMode.qr_code): ["control_v1p_sd15_qrcode"],
+    resource_id(ResourceKind.controlnet, SDVersion.sdxl, ControlMode.qr_code): ["control_sdxl__qrcode"],
     resource_id(ResourceKind.controlnet, SDVersion.sd15, ControlMode.segmentation): ["control_v11p_sd15_seg", "control_lora_rank128_v11p_sd15_seg"],
     resource_id(ResourceKind.controlnet, SDVersion.sdxl, ControlMode.segmentation): ["sdxl_segmentation_ade20k_controlnet"],
     resource_id(ResourceKind.controlnet, SDVersion.sd15, ControlMode.blur): ["control_v11f1e_sd15_tile", "control_lora_rank128_v11f1e_sd15_tile"],
